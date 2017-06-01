@@ -1,0 +1,32 @@
+<html>
+	<head>
+	<title>Geolocation</title>
+		<style>
+			#map {
+			height: 550px;
+			width: 50%;
+			}	
+		</style>
+	</head>
+	<body>
+		<h3>My Location</h3>
+		<div id="map"></div>
+		<script>
+			function initMap() {
+			var lokasi= {lat: -7.470475, lng: 112.440133};
+			var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 10,
+			center: lokasi
+			});
+			var marker = new google.maps.Marker({
+			position: lokasi,
+			icon : "https://lh3.googleusercontent.com/-cQugl5FMRuM/V1U_XbfQigI/AAAAAAAAEAU/_5Q9Hv4xAGo7Z_TUaGMyoch8vEPO1KnYgCLcB/h120/1.png",
+			map: map
+			});
+		}
+		</script>
+		<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCq8RsNf0-ciMRKUyhuJZiQ7wsOPGtzrzM&callback=initMap">
+		</script>
+	</body>
+</html>
